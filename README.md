@@ -1,5 +1,10 @@
 # Use cURL with Chrome Cookies
 
+Requirements:
+- Bash
+- websocat
+- jq
+
 Usage: 
 - Start chrome with `google-chrome-stable --remote-debugging-port=9222`
 - Make sure the tab you want to steal the cookies from is the active one
