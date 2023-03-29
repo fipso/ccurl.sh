@@ -1,5 +1,4 @@
-# Sync chrome session with curl
-
+# Use chrome session with cURL
 Tired of copy pasting cURL commands from chrome to your terminal ?  
 You don't want to use GUI tools like Postman ?  
   
@@ -19,3 +18,5 @@ Requirements:
   
 Install:  
 `sudo cp ./ccurl.sh /usr/bin/ccurl && sudo chmod +x /usr/bin/ccurl`
+
+This script was quickly hacked together. I am not a bash expert. If you see room for improvements dont hesitate to open an issue or provide a PR.
