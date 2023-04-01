@@ -21,7 +21,7 @@ command -v "$WEBSOCAT_CMD" &> /dev/null || {
 # Get the WebSocketDebuggerUrl for the tab with the specified prefix
 get_debug_url() {
     local debug_url
-    debug_url=$(curl "http://127.0.0.1:9222/json" -s | "$JQ_CMD" -r --arg prefix "$TAB_URL_PREFIX" '.[] | select(.url | startswith($prefix)) | .webSocketDebuggerUrl')
+    debug_url=$(curl "http://127.0.0.1:9222/json" -s | "$JQ_CMD" -r --arg prefix "$TAB_URL_PREFIX" ".[] | select(.url | startswith($prefix)) | .webSocketDebuggerUrl")
     if [[ -z $debug_url || $debug_url != ws* ]]; then
         printf "Could not find tab starting with '%s'. Is chrome running ?\n" "$TAB_URL_PREFIX"
         exit 1
