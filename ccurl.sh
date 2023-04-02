@@ -6,7 +6,7 @@ if [ "$#" -lt 2 ]; then
     exit 1
 fi
 
-# Use cURL to get the JSON information on the openTabs using your local Chrome instance's debug feature
+# Use cURL to get the JSON information on the openTab using your local Chrome instance's debug feature
 DEBUG_URL=$(curl "http://127.0.0.1:9222/json" -s | jq -r ".[] | select(.url | startswith(\"$1\")) | .webSocketDebuggerUrl")
 
 # If debug URL cannot be found, prompt the user and exit
